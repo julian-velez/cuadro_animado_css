@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+  }
+  
+  .starburst {
+    width: 100px;
+    height: 100px;
+    background-color: #ffcc00;
+    position: relative;
+    animation: rotateStarburst 2s linear infinite;
+  }
+  
+  .starburst::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    background-color: #ffcc00;
+    transform-origin: 100% 100%;
+  }
+  
+  @keyframes rotateStarburst {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
